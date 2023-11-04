@@ -14,7 +14,7 @@ echo -e "\e[36m remove old html files in nginx server \e[0m"
 rm -rf /usr/share/nginx/html/* >/tmp/expense.log
 
 echo -e "\e[36m downloading frontend zip file \e[0m"
-curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip>/tmp/expense.log
+curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip &>/tmp/expense.log
 
 echo -e "\e[36m unzip the frontend file \e[0m"
 cd /usr/share/nginx/html >/tmp/expense.log
