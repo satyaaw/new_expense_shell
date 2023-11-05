@@ -33,6 +33,7 @@ fi
 
 echo -e "\e[36m remove old html files in nginx server \e[0m"
 rm -rf /usr/share/nginx/html/* >"$log_file"
+if [ $? -eq 0 ]; then
   echo -e "\e[32m SUCCESS \e[0m"
 else
   echo -e "\e[31m FAILURE \e[0m"
