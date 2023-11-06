@@ -23,7 +23,7 @@ mkdir /app &>/tmp/expense.log
 echo $?
 
 echo -e "\e[36m removing the unzip file"
-rm -rf /app/backend.zip
+rm -rf /app/*
 echo $?
 
 echo -e "\e[36m downloading the files \e[0m"
