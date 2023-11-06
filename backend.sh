@@ -19,8 +19,13 @@ useradd expense &>>/tmp/expense.log
 echo $?
 
 echo -e "\e[36m make a directory \e[0m"
-mkdir /app &>/tmp/expense.log
-echo $?
+
+if [ ! -d /app ]; then
+  # script statements if $DIR doesn't exist.
+  mkdir /app &>/tmp/expense.log
+  echo $?
+fi
+
 
 echo -e "\e[36m removing the unzip file"
 rm -rf /app/*
@@ -34,8 +39,6 @@ echo $?
 echo -e "\e[36m unzip the files \e[0m"
 unzip /tmp/backend.zip &>/tmp/expense.log
 echo $?
-
-
 
 echo -e "\e[36m install npm \e[0m"
 npm install &>/tmp/expense.log
