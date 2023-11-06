@@ -18,7 +18,7 @@ mkdir /app &>/tmp/expense.log
 
 echo -e "\e[36m downloading the files \e[0m"
 curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip &>/tmp/expense.log
-cd /app &>/temp/expense.log
+cd /app &>/tmp/expense.log
 
 echo -e "\e[36m unzip the files \e[0m"
 unzip /tmp/backend.zip &>/tmp/expense.log
