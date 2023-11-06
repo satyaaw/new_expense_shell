@@ -22,6 +22,10 @@ echo -e "\e[36m make a directory \e[0m"
 mkdir /app &>/tmp/expense.log
 echo $?
 
+echo -e "\e[36m removing the unzip file"
+rm -rf /tmp/backend.zip
+echo $?
+
 echo -e "\e[36m downloading the files \e[0m"
 curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip &>/tmp/expense.log
 cd /app &>/tmp/expense.log
@@ -30,6 +34,8 @@ echo $?
 echo -e "\e[36m unzip the files \e[0m"
 unzip /tmp/backend.zip &>/tmp/expense.log
 echo $?
+
+
 
 echo -e "\e[36m install npm \e[0m"
 npm install &>/tmp/expense.log
